@@ -1,0 +1,259 @@
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+ display: block;
+}
+
+body {
+ line-height: 1;
+}
+
+ol,
+ul {
+ list-style: none;
+}
+
+blockquote,
+q {
+ quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+ content: '';
+ content: none;
+}
+
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+/*End of CSS reset*/
+
+:root {
+    --bs-primary: #f970f5;
+    --bs-secondary: #f91b6d;
+    --bs-primary-rgb: 199, 140 6;
+    --bs-secondary-rgb: 255, 230, 172;
+    --bs-dark: #383838;
+    --bs-dark-rgb: 34, 34, 34;
+}
+
+h2{
+    padding-left: 1rem;
+}
+
+form {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.form-color {
+    background: url(../images/texture.png)
+    no-repeat center;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn-primary,
+.btn-primary:hover{
+    background: var(--bs-primary);
+    border: none;
+}
+
+.hours{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+th{
+    text-align: center;
+}
+
+
+td{
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.table-back{
+    background: url(../images/texture.png)
+    no-repeat center;
+    background-size: cover;
+    background-color: none;
+}
+
+footer p{
+    color: var(--bs-primary);
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    display: inline;
+}
+
+
+.icon{
+    inline-size: 20%;
+    max-width: 20rem;
+    margin: 1rem;
+}
+
+/*----------------
+    desktop styles
+-----------------*/
+@media screen and (min-width: 760px) {
+    .moblie header{
+        display: none;
+    }
+
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(1fr 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .form-color{
+        grid-column: span 1;
+        grid-row-start: 2;
+    }
+
+    .hours{
+        grid-column: span 1;
+        grid-row-start: 2;
+        margin-top: 3rem;
+    }
+
+    .container-xl{
+        display: flex;
+    }
+
+    footer ul{
+        text-align: right;
+        flex-basis: 50%;
+    }
+    
+    footer p{
+        text-align: left;
+        flex-basis: 50%;
+        padding-top: 3rem;
+    }
+
+    .icon{
+        max-width: 5rem;
+    }
+}

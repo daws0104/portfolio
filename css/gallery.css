@@ -149,10 +149,13 @@ h2{
     padding-left: 1rem;
 }
 
-img{
-    inline-size: 30%;
-}
 
+.gallery img{
+    inline-size: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
 
 footer p{
     color: var(--bs-primary);
@@ -178,6 +181,29 @@ footer ul li{
     desktop styles
 -----------------*/
 @media screen and (min-width: 760px) {
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin-left: 7rem;
+    }
+
+    h2{
+        grid-column: span 2;
+    }
+    
+    img[src$="kaine.jpg"] {
+        height: 100rem;
+    }
+    
+    img{
+        inline-size: 50%;
+    }
+
+    .container-xl{
+        display: flex;
+    }
+
     footer ul{
         text-align: right;
         flex-basis: 50%;

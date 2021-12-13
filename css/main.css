@@ -154,23 +154,36 @@ table {
 /*---------------
   header styles
 -----------------*/
+/*drawer x button*/
 .btn-close{
     color:white;
 }
+
+/*page links*/
 .navbar-dark .navbar-nav .nav-link{
     color:var(--bs-primary);
 }
+
+/*page links active*/
 .navbar-dark .navbar-nav .nav-link.active, 
 .navbar-dark .navbar-nav .show>.nav-link{
     color:var(--bs-secondary);
     text-decoration: none;
 }
+
+/*drawer button*/
 .offcanvas-header button{
     background: none;
     border: none;
     outline: none;
     color: var(--bs-primary);
 }
+
+/*pen logo*/
+img[src$="pen-logo.png"]{
+    display: none;
+}
+
 /*---------------
   card styles
 -----------------*/
@@ -211,6 +224,21 @@ h5 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+/*form button*/
+.form-color .btn:hover{
+    background-color: var(--bs-secondary);
+}
+
+/*home page panda image*/
+#home-panda{
+    margin-bottom: 1rem;
+}
+
+/*home page button hover*/
+#home-styles .btn:hover{
+    background-color: var(--bs-secondary);
+}
 /*---------------
   card prices styles
 -----------------*/
@@ -219,6 +247,7 @@ h5 {
     min-width: 180px;
 }
 
+/*prices page button*/
 .prices-cards .btn-primary{
     margin-left: 5rem;
     background-color: var(--bs-secondary);
@@ -227,18 +256,22 @@ h5 {
 /*---------------
    about styles
 -----------------*/
+/*small caitlin photo*/
 img[src$="caitlin.jpg"]{	
     inline-size: 100%;
 }
 
+/*caitlin banner photo*/
 img[src$="banner.png"]{	
     display: none;
 }
 
+/*subtitles*/
 h2{
     padding-left: 1rem;
 }
 
+/*paragraphoh text*/
 .about-text{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -248,6 +281,7 @@ h2{
 /*---------------
    gallery styles
 -----------------*/
+/*gallery images*/
 .gallery img{
     inline-size: 100%;
     padding-left: 1rem;
@@ -258,16 +292,19 @@ h2{
 /*---------------
    contact styles
 -----------------*/
+/*form title*/
 h3{
     padding-left: 1rem;
 }
 
+/*form*/
 form {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
 
+/*form and background*/
 .form-color {
     background: url(../images/texture.png)
     no-repeat center;
@@ -278,28 +315,37 @@ form {
     margin-right: 1rem;
 }
 
+/*form button hover*/
+.form-color .btn:hover{
+    background-color: var(--bs-secondary);
+}
 
+/*hours tables*/
 .hours{
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
+/*table head*/
 th{
     text-align: center;
 }
 
-
+/*table item*/
 td{
     padding-top: 5rem;
     text-align: center;
 }
 
+/*table background*/
 .table-back{
     background: url(../images/texture.png)
     no-repeat center;
     background-size: cover;
     background-color: none;
 }
+
+/*buttons*/
 .btn-primary,
 .btn-primary:hover{
     background: var(--bs-primary);
@@ -309,21 +355,23 @@ td{
 /*---------------
   footer styles
 -----------------*/
-
+/*footer paragraph text*/
 footer p{
     color: var(--bs-primary);
     text-align: center;
 }
 
+/*footer social media icon list*/
 footer ul{
     list-style: none;
 }
 
+/*footer social media icon list items*/
 footer ul li{
     display: inline;
 }
 
-
+/*social media icons*/
 .icon{
     inline-size: 20%;
     max-width: 20rem;
@@ -335,33 +383,63 @@ footer ul li{
 -----------------*/
 @media screen and (min-width: 760px){
     /*----------------
+       header styles
+    -----------------*/
+    /*pen logo*/
+    img[src$="pen-logo.png"]{
+        display: inherit;
+        inline-size: 5rem;
+    }
+    
+    /*----------------
       home us styles
     -----------------*/
-    
+    /*home flex display*/
+    .home-gallery-card{
+        display: flex;
+    }
+
+    /*home image of panda*/
+    #home-panda{
+        inline-size: 50%;
+        margin-bottom: 0rem;
+    }
+
+
+    /*home image of ren*/
+    #home-ren{
+        inline-size: 50%;
+    }
+
     
     /*----------------
       about us styles
     -----------------*/
+    /*small caitlin photo*/
     img[src$="caitlin.jpg"]{	
         display: none;	
     }	
-    	
+    
+    /*caitlin banner photo*/
     img[src$="banner.png"]{	
         display: inherit;	
         max-height: 30rem;	
         padding-top: 1rem;	
         margin-left: 1rem;
         margin-right: 1rem;
+        inline-size: 70%;
         max-width: 93rem;
         width: fit-content;
     }
-
+    
+    /*about title*/
     h2{	
         padding-top: 1rem;	
         padding-bottom: 1rem;	
         margin-left: 15rem;
     }
-
+    
+    /*about pharagrah text*/
     .about-text{
         text-align: center;	
         max-width: 65rem;	
@@ -372,11 +450,13 @@ footer ul li{
     /*----------------
        prices styles
     -----------------*/
+    /*price cards grid*/
     .prices-cards .card{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /*card images*/
     .prices-cards .card-img-top{
         inline-size: 50%;
         grid-column-start: span 1;
@@ -387,42 +467,37 @@ footer ul li{
         margin-left: 15rem;
     }
 
+
+    /*prices photo of nina*/
     .prices-cards img[src$="nina.jpg"]{
         width: 600px;
     }
     
-
-
+    /*cards titles*/
     .prices-cards .card-title{
         grid-row-start: 1;
         grid-column-start: 2;
         order: 2;
         margin-top: 1rem;
+        font-size: 3rem;
     }
 
+    /*cards bodys*/
     .prices-cards .card-body{
         max-width: 30rem;
         grid-column: auto;
         order: 3;
     }
 
+    /*cards button*/
     .prices-cards .btn{
         margin-top: 2rem;
     }
 
-    .card .card-title{
-        font-size: 3rem;
-    }
-
-
-
-
-
-
-
     /*---------------
       gallery styles
     -----------------*/
+    /*gallery picture grid*/
     .gallery{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -430,35 +505,39 @@ footer ul li{
         margin-left: 7rem;
     }
 
+    /*gallery title*/
     h2{
         grid-column: span 2;
         margin-left: 0rem;
     }
     
+    /*kaine picture*/
     img[src$="kaine.jpg"] {
         height: 100rem;
     }
     
+    /*pictures*/
     img{
         inline-size: 50%;
     }
-    
 
     /*----------------
        form styles
     -----------------*/
-
+    /*contact form grid*/
     .contact-form{
         display: grid;
         grid-template-columns: repeat(1fr 1fr);
         grid-template-rows: 1fr;
     }
 
+    /*form background colours*/
     .form-color{
         grid-column: span 1;
         grid-row-start: 2;
     }
-
+    
+    /*table*/
     .hours{
         grid-column: span 1;
         grid-row-start: 2;
@@ -467,21 +546,25 @@ footer ul li{
     /*----------------
        footer styles
     -----------------*/
+    /*footer flex display*/
     .container-xl{
         display: flex;
     }
-
+    
+    /*footer social media icon list*/
     footer ul{
         text-align: right;
         flex-basis: 50%;
     }
     
+    /*footer paragraph text*/
     footer p{
         text-align: left;
         flex-basis: 50%;
         padding-top: 3rem;
     }
 
+    /*social media icons*/
     .icon{
         max-width: 5rem;
     }
